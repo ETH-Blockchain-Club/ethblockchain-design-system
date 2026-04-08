@@ -269,7 +269,7 @@
     <a href="#typography" class="nav-pill">Typography</a>
     <a href="#spacing" class="nav-pill">Spacing</a>
     <a href="#buttons" class="nav-pill">Buttons</a>
-    <a href="#prompt" class="nav-pill">Prompt</a>
+    <a href="#prompt" class="nav-pill">Prompts</a>
   </div>
 </nav>
 
@@ -711,23 +711,23 @@
     </div>
   </section>
 
-  <!-- PROMPT TEMPLATE -->
+  <!-- PROMPT TEMPLATES -->
   <section id="prompt">
-    <div class="section-label">05 — Prompt Template</div>
-    <div class="section-title">Design spec for AI prompting</div>
-    <p style="font-size:14px;color:var(--text-muted);margin-bottom:1.25rem;line-height:1.6;">Click anywhere on the block below to copy the full design system specification to your clipboard — ready to paste into any AI prompt.</p>
+    <div class="section-label">05 — Prompt Templates</div>
+    <div class="section-title">Design specs for AI prompting</div>
+    <p style="font-size:14px;color:var(--text-muted);margin-bottom:1.25rem;line-height:1.6;">Use the website prompt for full UI implementation details. Use the general-purpose prompt for banners, slides, and visual assets that only need typography and color guidance.</p>
 
-    <div id="prompt-block" onclick="copyPrompt()" style="background:var(--card);border:1px solid var(--border-strong);border-radius:12px;padding:1.5rem;cursor:pointer;position:relative;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-strong)'">
+    <div id="prompt-block-website" onclick="copyPrompt('prompt-text-website', 'copy-badge-website')" style="background:var(--card);border:1px solid var(--border-strong);border-radius:12px;padding:1.5rem;cursor:pointer;position:relative;transition:border-color 0.15s;margin-bottom:1rem;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-strong)'">
 
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border);">
         <div style="display:flex;align-items:center;gap:8px;">
           <div style="width:8px;height:8px;border-radius:50%;background:var(--accent);"></div>
-          <span style="font-family:'Geist Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;">Design System Prompt</span>
+          <span style="font-family:'Geist Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;">Website Designer Prompt</span>
         </div>
-        <div id="copy-badge" style="font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;color:var(--text-muted);border:1px solid var(--border-strong);border-radius:6px;padding:4px 12px;">&#8984; Click to copy</div>
+        <div id="copy-badge-website" style="font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;color:var(--text-muted);border:1px solid var(--border-strong);border-radius:6px;padding:4px 12px;">&#8984; Click to copy</div>
       </div>
 
-      <pre id="prompt-text" style="font-family:'Geist Mono',monospace;font-size:12px;color:var(--text-body);line-height:1.8;white-space:pre-wrap;word-break:break-word;margin:0;">## ETH Blockchain Club — Design System Specification
+      <pre id="prompt-text-website" style="font-family:'Geist Mono',monospace;font-size:12px;color:var(--text-body);line-height:1.8;white-space:pre-wrap;word-break:break-word;margin:0;">## ETH Blockchain Club — Website Designer Prompt
 
 Use the following design tokens when building UI for the ETH Blockchain Club.
 
@@ -816,6 +816,69 @@ Use the following design tokens when building UI for the ETH Blockchain Club.
 - Navbar horizontal padding:  2.5rem
 - Section horizontal padding: 3rem</pre>
     </div>
+
+    <div id="prompt-block-general" onclick="copyPrompt('prompt-text-general', 'copy-badge-general')" style="background:var(--card);border:1px solid var(--border-strong);border-radius:12px;padding:1.5rem;cursor:pointer;position:relative;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-strong)'">
+
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border);">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <div style="width:8px;height:8px;border-radius:50%;background:var(--highlight);"></div>
+          <span style="font-family:'Geist Mono',monospace;font-size:11px;color:var(--highlight);letter-spacing:0.1em;text-transform:uppercase;">General Purpose Designer Prompt</span>
+        </div>
+        <div id="copy-badge-general" style="font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;color:var(--text-muted);border:1px solid var(--border-strong);border-radius:6px;padding:4px 12px;">&#8984; Click to copy</div>
+      </div>
+
+      <pre id="prompt-text-general" style="font-family:'Geist Mono',monospace;font-size:12px;color:var(--text-body);line-height:1.8;white-space:pre-wrap;word-break:break-word;margin:0;">## ETH Blockchain Club — General Purpose Designer Prompt
+
+Use only the typography and color tokens below when creating non-website assets (banners, slides, social graphics, posters, etc.).
+
+---
+
+### Colors
+
+#### Backgrounds & Surfaces
+- Background:       #04060f  (rgb 4, 6, 15)
+- Surface:          #080c18  (rgb 8, 12, 24)
+- Cards:            #0d1424  (rgb 13, 20, 36)
+- Elevated surface: #121b30  (rgb 18, 27, 48)
+
+#### Accents & Highlights
+- Accent:           #5b7eff  (rgb 91, 126, 255)
+- Secondary accent: #a78bfa  (rgb 167, 139, 250)
+- Highlight:        #38bdf8  (rgb 56, 189, 248)
+- Buttons:          #16539b  (rgb 22, 83, 155)
+
+#### Text
+- Primary text:     #eef2ff  (rgb 238, 242, 255)
+- Body text:        #7086b8  (rgb 112, 134, 184)
+- Muted text:       #6b7fa8  (rgb 107, 127, 168)
+- Dim text:         #2e3a52  (rgb 46, 58, 82)
+
+#### Borders
+- Border:           rgba(99, 130, 255, 0.10)
+- Strong border:    rgba(99, 130, 255, 0.22)
+
+#### Logo Colors
+- Logo left/right:  #16539b
+- Logo center:      #2eb9ff
+
+---
+
+### Typography
+
+#### Font Style (Typefaces)
+- Headings:          Montserrat
+- Body text:         IBM Plex Sans
+- Mono labels (optional): Geist Mono
+
+#### Font Sizes (for slides, banners, and social assets)
+- Main title:        20px
+- Secondary title:   18px
+- Body:              16px
+- Supporting text:   14px
+- Label/caption:     12px
+- Fine print:        11px
+- Tiny label:        10px</pre>
+    </div>
   </section>
 
 </main>
@@ -842,9 +905,9 @@ Use the following design tokens when building UI for the ETH Blockchain Club.
     }
   }
 
-  function copyPrompt() {
-    var text = document.getElementById('prompt-text').innerText;
-    var badge = document.getElementById('copy-badge');
+  function copyPrompt(textId, badgeId) {
+    var text = document.getElementById(textId).innerText;
+    var badge = document.getElementById(badgeId);
     function showCopied() {
       badge.innerHTML = '&#10003; Copied!';
       badge.style.color = '#38bdf8';
