@@ -17,6 +17,7 @@
     --accent2: #a78bfa;
     --highlight: #38bdf8;
     --btn: #16539b;
+    --btn-hover: #2eb9ff;
     --text-primary: #eef2ff;
     --text-body: #7086b8;
     --text-muted: #6b7fa8;
@@ -237,9 +238,9 @@
     transition: all 0.15s;
   }
   .demo-btn-primary { background: #16539b; color: var(--text-primary); }
-  .demo-btn-primary:hover { background: #1e68c0; }
+  .demo-btn-primary:hover { background: var(--btn-hover); }
   .demo-btn-outline { background: transparent; color: var(--accent); border: 1px solid var(--border-strong); }
-  .demo-btn-outline:hover { background: rgba(22,83,155,0.08); }
+  .demo-btn-outline:hover { background: var(--btn-hover); color: #04060f; border-color: var(--btn-hover); }
 
   /* FOOTER */
   footer {
@@ -413,7 +414,7 @@
             <div style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;color:var(--text-primary);">With background</div>
             <div style="font-family:'Geist Mono',monospace;font-size:10px;color:var(--text-muted);">PNG · black bg</div>
           </div>
-          <a id="dl-dark" download="ethblockchain-club-logo-black.png" style="font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;color:var(--accent);border:1px solid var(--border-strong);border-radius:6px;padding:5px 12px;text-decoration:none;" onmouseover="this.style.background='rgba(91,126,255,0.1)'" onmouseout="this.style.background='transparent'">&#8595; Download</a>
+          <a id="dl-dark" download="ethblockchain-club-logo-black.png" style="font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;color:var(--accent);border:1px solid var(--border-strong);border-radius:6px;padding:5px 12px;text-decoration:none;" onmouseover="this.style.background='#2eb9ff';this.style.color='#04060f';this.style.borderColor='#2eb9ff'" onmouseout="this.style.background='transparent';this.style.color='var(--accent)';this.style.borderColor='var(--border-strong)'">&#8595; Download</a>
         </div>
       </div>
 
@@ -426,7 +427,7 @@
             <div style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;color:var(--text-primary);">Transparent</div>
             <div style="font-family:'Geist Mono',monospace;font-size:10px;color:var(--text-muted);">PNG · no bg</div>
           </div>
-          <a id="dl-transparent" download="ethblockchain-club-logo-transparent.png" style="font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;color:var(--accent);border:1px solid var(--border-strong);border-radius:6px;padding:5px 12px;text-decoration:none;" onmouseover="this.style.background='rgba(91,126,255,0.1)'" onmouseout="this.style.background='transparent'">&#8595; Download</a>
+          <a id="dl-transparent" download="ethblockchain-club-logo-transparent.png" style="font-family:'IBM Plex Sans',sans-serif;font-size:12px;font-weight:500;color:var(--accent);border:1px solid var(--border-strong);border-radius:6px;padding:5px 12px;text-decoration:none;" onmouseover="this.style.background='#2eb9ff';this.style.color='#04060f';this.style.borderColor='#2eb9ff'" onmouseout="this.style.background='transparent';this.style.color='var(--accent)';this.style.borderColor='var(--border-strong)'">&#8595; Download</a>
         </div>
       </div>
 
@@ -675,19 +676,17 @@
         </div>
       </div>
       <div class="color-card">
-        <div class="color-swatch" style="background:#1e68c0;"></div>
+        <div class="color-swatch" style="background:#2eb9ff;"></div>
         <div class="color-info">
           <div class="color-role">Hover state</div>
-          <div class="color-hex" onclick="copyHex(this, '#1e68c0')">#1e68c0 <span class="copy-icon">⎘</span></div>
+          <div class="color-hex" onclick="copyHex(this, '#2eb9ff')">#2eb9ff <span class="copy-icon">⎘</span></div>
         </div>
       </div>
       <div class="color-card">
-        <div class="color-swatch swatch-checkerboard">
-          <div class="swatch-overlay" style="background:rgba(22,83,155,0.08);"></div>
-        </div>
+        <div class="color-swatch" style="background:#2eb9ff;"></div>
         <div class="color-info">
           <div class="color-role">Outline hover</div>
-          <div class="color-hex" onclick="copyHex(this, 'rgba(22,83,155,0.08)')">rgba(22,83,155, 0.08) <span class="copy-icon">⎘</span></div>
+          <div class="color-hex" onclick="copyHex(this, '#2eb9ff')">#2eb9ff <span class="copy-icon">⎘</span></div>
         </div>
       </div>
       <div class="color-card">
@@ -795,8 +794,8 @@ Use the following design tokens when building UI for the ETH Blockchain Club.
 ### Buttons
 
 - Primary bg:       #16539b
-- Primary hover:    #1e68c0
-- Outline hover bg: rgba(22, 83, 155, 0.08)
+- Primary hover:    #2eb9ff
+- Outline hover bg: #2eb9ff
 - Social pill bg:   rgba(22, 83, 155, 0.12)
 - Social pill border: rgba(22, 83, 155, 0.22)
 - Padding:          10px 22px
