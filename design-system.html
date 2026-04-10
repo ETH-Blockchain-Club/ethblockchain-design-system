@@ -13,9 +13,9 @@
     --surface: #080c18;
     --card: #0d1424;
     --elevated: #121b30;
-    --accent: #5b7eff;
+    --accent: #2eb9ff;
     --accent2: #a78bfa;
-    --highlight: #38bdf8;
+    --highlight: #2eb9ff;
     --btn: #16539b;
     --btn-hover: #2eb9ff;
     --text-primary: #eef2ff;
@@ -73,7 +73,7 @@
     text-decoration: none;
   }
   .nav-pill:hover, .nav-pill.active {
-    background: rgba(91,126,255,0.1);
+    background: rgba(46,185,255,0.1);
     border-color: var(--accent);
     color: var(--accent);
   }
@@ -318,10 +318,10 @@
     <div class="section-title">Accents & Highlights</div>
     <div class="color-grid" style="margin-bottom: 1.5rem;">
       <div class="color-card">
-        <div class="color-swatch" style="background:#5b7eff;"></div>
+        <div class="color-swatch" style="background:#2eb9ff;"></div>
         <div class="color-info">
           <div class="color-role">Accent</div>
-          <div class="color-hex" onclick="copyHex(this, '#5b7eff')">#5b7eff <span class="copy-icon">⎘</span></div>
+          <div class="color-hex" onclick="copyHex(this, '#2eb9ff')">#2eb9ff <span class="copy-icon">⎘</span></div>
         </div>
       </div>
       <div class="color-card">
@@ -332,10 +332,10 @@
         </div>
       </div>
       <div class="color-card">
-        <div class="color-swatch" style="background:#38bdf8;"></div>
+        <div class="color-swatch" style="background:#2eb9ff;"></div>
         <div class="color-info">
           <div class="color-role">Highlight</div>
-          <div class="color-hex" onclick="copyHex(this, '#38bdf8')">#38bdf8 <span class="copy-icon">⎘</span></div>
+          <div class="color-hex" onclick="copyHex(this, '#2eb9ff')">#2eb9ff <span class="copy-icon">⎘</span></div>
         </div>
       </div>
       <div class="color-card">
@@ -352,8 +352,8 @@
       <div class="color-card">
         <div class="color-swatch" style="background:#eef2ff;"></div>
         <div class="color-info">
-          <div class="color-role" style="color:#04060f;">Primary text</div>
-          <div class="color-hex" style="color:#080c18;" onclick="copyHex(this, '#eef2ff')">#eef2ff <span class="copy-icon">⎘</span></div>
+          <div class="color-role">Primary text</div>
+          <div class="color-hex" onclick="copyHex(this, '#eef2ff')">#eef2ff <span class="copy-icon">⎘</span></div>
         </div>
       </div>
       <div class="color-card">
@@ -741,9 +741,9 @@ Use the following design tokens when building UI for the ETH Blockchain Club.
 - Elevated surface: #121b30  (rgb 18, 27, 48)
 
 #### Accents & Highlights
-- Accent:           #5b7eff  (rgb 91, 126, 255)
+- Accent:           #2eb9ff  (rgb 46, 185, 255)
 - Secondary accent: #a78bfa  (rgb 167, 139, 250)
-- Highlight:        #38bdf8  (rgb 56, 189, 248)
+- Highlight:        #2eb9ff  (rgb 46, 185, 255)
 - Buttons:          #16539b  (rgb 22, 83, 155)
 
 #### Text
@@ -841,9 +841,9 @@ Use only the typography and color tokens below when creating non-website assets 
 - Elevated surface: #121b30  (rgb 18, 27, 48)
 
 #### Accents & Highlights
-- Accent:           #5b7eff  (rgb 91, 126, 255)
+- Accent:           #2eb9ff  (rgb 46, 185, 255)
 - Secondary accent: #a78bfa  (rgb 167, 139, 250)
-- Highlight:        #38bdf8  (rgb 56, 189, 248)
+- Highlight:        #2eb9ff  (rgb 46, 185, 255)
 - Buttons:          #16539b  (rgb 22, 83, 155)
 
 #### Text
@@ -894,7 +894,7 @@ Use only the typography and color tokens below when creating non-website assets 
       var hexEl = feedback.querySelector('.color-hex') || el;
       var orig = hexEl.innerHTML;
       hexEl.innerHTML = '&#10003; Copied!';
-      hexEl.style.color = '#38bdf8';
+      hexEl.style.color = '#2eb9ff';
       setTimeout(function() { hexEl.innerHTML = orig; hexEl.style.color = ''; }, 1500);
     }
     if (navigator.clipboard && window.isSecureContext) {
@@ -909,8 +909,8 @@ Use only the typography and color tokens below when creating non-website assets 
     var badge = document.getElementById(badgeId);
     function showCopied() {
       badge.innerHTML = '&#10003; Copied!';
-      badge.style.color = '#38bdf8';
-      badge.style.borderColor = '#38bdf8';
+      badge.style.color = '#2eb9ff';
+      badge.style.borderColor = '#2eb9ff';
       setTimeout(function() {
         badge.innerHTML = '&#8984; Click to copy';
         badge.style.color = '';
