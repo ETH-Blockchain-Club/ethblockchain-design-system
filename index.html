@@ -609,7 +609,7 @@
   <!-- SPACING -->
   <section id="spacing">
     <div class="section-label">03 — Spacing</div>
-    <div class="section-title">Spatial tokens</div>
+    <div class="section-title">Spatial tokens (shared defaults)</div>
     <div class="spacing-grid">
       <div class="spacing-row">
         <div class="spacing-value">60px</div>
@@ -617,9 +617,24 @@
         <div class="spacing-role">navbar height</div>
       </div>
       <div class="spacing-row">
+        <div class="spacing-value">calc(100svh - 72px)</div>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:100%"></div></div>
+        <div class="spacing-role">shared hero shell min-height (cross-page default)</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-value">112px 3rem 28px</div>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:92%"></div></div>
+        <div class="spacing-role">shared hero shell padding (cross-page default)</div>
+      </div>
+      <div class="spacing-row">
         <div class="spacing-value">64px</div>
         <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:80%"></div></div>
-        <div class="spacing-role">hero gap</div>
+        <div class="spacing-role">hero column gap (shared default)</div>
+      </div>
+      <div class="spacing-row">
+        <div class="spacing-value">56px 3rem 64px</div>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:86%"></div></div>
+        <div class="spacing-role">second section spacing (cross-page default)</div>
       </div>
       <div class="spacing-row">
         <div class="spacing-value">84px / 3rem</div>
@@ -629,7 +644,7 @@
       <div class="spacing-row">
         <div class="spacing-value">42px 3rem 32px</div>
         <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:55%"></div></div>
-        <div class="spacing-role">hero spacing</div>
+        <div class="spacing-role">hero spacing (legacy reference only)</div>
       </div>
       <div class="spacing-row">
         <div class="spacing-value">20px 18px</div>
@@ -730,6 +745,10 @@
 
 Use the following design tokens when building UI for the ETH Blockchain Club.
 
+Reference files for implementation alignment:
+- design-system-summary.md
+- design-tokens.json
+
 ---
 
 ### Colors
@@ -806,14 +825,34 @@ Use the following design tokens when building UI for the ETH Blockchain Club.
 ### Spacing
 
 - Navbar height:              60px
-- Hero gap:                   64px
+- Shared hero shell min-height: calc(100svh - 72px)
+- Shared hero shell padding:  112px 3rem 28px
+- Hero column gap:            64px
+- Second section spacing:     56px 3rem 64px
 - What-we-do section padding: 84px 3rem
-- Hero spacing:               42px 3rem 32px
+- Hero spacing (legacy only): 42px 3rem 32px
 - Pillar card padding:        20px 18px
 - Button padding:             10px 22px
 - Footer pill padding:        8px 14px
 - Navbar horizontal padding:  2.5rem
-- Section horizontal padding: 3rem</pre>
+- Section horizontal padding: 3rem
+
+### Shared Top Section Consistency Rules
+
+- Every page must implement the first visible section using the shared hero shell pattern so the top section always aligns to the same vertical start point as other pages.
+- The first visible section must start at the same height on every page.
+- The first section must use the same width and horizontal centering rules as the shared hero shell.
+- The first section must reuse the same max width, min height, top padding, and top-aligned columns used on Home and About.
+- The spacing between the first and second sections must be the same across pages.
+- Do not use page-specific offsets or custom hero spacing unless explicitly allowed by the design system.
+
+Implementation spec:
+- min-height: calc(100svh - 72px)
+- padding: 112px 3rem 28px
+- column gap: 64px
+- align-items: start
+- shared width/margin centering consistent with Home and About
+- second section spacing: 56px 3rem 64px</pre>
     </div>
 
     <div id="prompt-block-general" onclick="copyPrompt('prompt-text-general', 'copy-badge-general')" style="background:var(--card);border:1px solid var(--border-strong);border-radius:12px;padding:1.5rem;cursor:pointer;position:relative;transition:border-color 0.15s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border-strong)'">
